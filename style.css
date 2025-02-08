@@ -67,6 +67,9 @@ body {
     --sidebar-bg: #028dff;
     --content-bg: #ccc;
     --sidebar-text: #fff;
+    --header-bg: #fff;
+    --search-border: #5a5757;
+    --header-button-text: #fff; 
 }
 
 .container {
@@ -78,8 +81,85 @@ body {
 
 .header {
     grid-column: 2 / 3;
-    background-color: green;
+    background-color: var(--header-bg);
+    padding: 1em 2em;
+    font-family: mainFont;
 }
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 2em;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search input {
+    border: transparent;
+    background-color: var(--content-bg);
+    border-radius: 1em;
+    width: 30vw;
+    padding: 0 1em;
+    font-family: serif;
+}
+
+.search svg {
+    height: 24px;
+    width: auto;
+}
+
+.quick-access {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.quick-access svg {
+    height: 24px;
+    width: auto;
+}
+
+.quick-access img {
+    height: 2em;
+    width: auto;
+    border: 1px solid rgb(255, 243, 68);
+    border-radius: 50%;
+}
+
+.bottombar {
+    display: grid;
+    grid-template-columns: 84px 4fr 3fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.bottombar h1 {
+    grid-column: 2;
+    font-size: 2em;
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-around;
+    height: 48px;
+    gap: 16px;
+}
+
+.tasks button {
+    border: transparent;
+    background-color: var(--sidebar-bg);
+    color: var(--header-button-text);
+    font-family: monospace;
+    border-radius: 3em;
+    width: 150px;
+    cursor: pointer;
+}
+
 
 .sidebar {
     grid-row: 1 / 3;
